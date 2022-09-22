@@ -1,0 +1,8 @@
+name: DeathBan
+version: '${project.version}'
+main: de.jxstin1337.deathban.Main
+author: Jxstin1337
+description: DeathBan System for Fenrir
+
+commands:
+  resetban:
