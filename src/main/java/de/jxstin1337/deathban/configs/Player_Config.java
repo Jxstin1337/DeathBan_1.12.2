@@ -22,7 +22,6 @@ public class Player_Config {
             }
         } else {
             try {
-                file.createNewFile();
                 configFile.set("Players", "");
                 configFile.save(file);
             } catch (IOException ioe) {
