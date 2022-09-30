@@ -24,8 +24,10 @@ public class Default_Config {
         } else {
             try {
                 configFile.set("DeathBan.Prefix", "&4&lDeath&1&lBan &7» ");
-                configFile.set("DeathBan.Messages.kickBanMessage", "&cDu wurdest für 5 Minuten gebannt, da du gestorben bist.");
-                configFile.set("DeathBan.Messages.isBannedMessage", "&cDu bist aktuell für 5 Minuten gebannt, da du gestorben bist.");
+                configFile.set("DeathBan.Messages.kickBanMessage",
+                        "&cDu wurdest für 5 Minuten gebannt, da du gestorben bist.");
+                configFile.set("DeathBan.Messages.isBannedMessage",
+                        "&cDu bist aktuell für 5 Minuten gebannt, da du gestorben bist.");
                 configFile.set("DeathBan.Permissions.canBan", "deathban.ban");
                 configFile.set("DeathBan.Permissions.bypassBan", "deathban.bypass");
                 configFile.set("DeathBan.BanSeconds", 300);
@@ -38,6 +40,7 @@ public class Default_Config {
     }
 
     public static String getPrefix() {
-        return configFile.getString("DeathBan.Prefix").replace("&", "§");
+        return configFile.getString("DeathBan.Prefix")
+                .replace("&", "§");
     }
 }
