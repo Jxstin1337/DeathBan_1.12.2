@@ -1,6 +1,7 @@
 package de.jxstin1337.deathban;
 
 import de.jxstin1337.deathban.commands.ResetBan_Command;
+import de.jxstin1337.deathban.configs.Default_Config;
 import de.jxstin1337.deathban.configs.Player_Config;
 import de.jxstin1337.deathban.events.Death_Event;
 import de.jxstin1337.deathban.events.Login_Event;
@@ -22,6 +23,7 @@ public final class Main extends JavaPlugin {
         registerListeners();
         registerCommands();
         Player_Config.saveConfig();
+        Default_Config.saveConfig();
     }
 
     @Override
