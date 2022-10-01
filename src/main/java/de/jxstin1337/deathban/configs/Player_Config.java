@@ -3,9 +3,13 @@ package de.jxstin1337.deathban.configs;
 // created by Justin Fiedler on 20.09.2022 with IntelliJ
 
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.entity.Player;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 public class Player_Config {
@@ -52,6 +56,12 @@ public class Player_Config {
         if (configFile.get("Players." + uuid) == null) return false;
         if (configFile.getLong("Players." + uuid) == -1) return false;
         return configFile.getLong("Players." + uuid) > System.currentTimeMillis();
+    }
+
+    public static String convertMillisInDate(Player p) {
+        Date remaining = new Date(configFile.getLong("Players." + p.getUniqueId().toString()));
+        DateFormat timeFormat = new SimpleDateFormat("HH:mm:ss");
+        return timeFormat.format(remaining);
     }
 
 }

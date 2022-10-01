@@ -17,7 +17,8 @@ public class Login_Event implements Listener {
         if (Player_Config.isPlayerBanned(player.getUniqueId().toString())) {
             event.disallow(PlayerLoginEvent.Result.KICK_OTHER,
                     Default_Config.getConfigFile().getString("DeathBan.Messages.isBannedMessage")
-                            .replaceAll("&", "§"));
+                            .replaceAll("&", "§")
+                            .replaceAll("%time%", Player_Config.convertMillisInDate(player)));
         } else {
             Player_Config.setPlayerBanTime(player.getUniqueId().toString(), -1);
             event.allow();

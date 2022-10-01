@@ -6,3 +6,4 @@ description: DeathBan System for Fenrir
 
 commands:
   resetban:
+  deathban:

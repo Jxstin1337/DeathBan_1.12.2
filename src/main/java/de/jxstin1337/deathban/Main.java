@@ -1,5 +1,6 @@
 package de.jxstin1337.deathban;
 
+import de.jxstin1337.deathban.commands.ReloadConfig_Command;
 import de.jxstin1337.deathban.commands.ResetBan_Command;
 import de.jxstin1337.deathban.configs.Default_Config;
 import de.jxstin1337.deathban.configs.Player_Config;
@@ -39,5 +40,6 @@ public final class Main extends JavaPlugin {
 
     private void registerCommands() {
         getCommand("resetban").setExecutor(new ResetBan_Command());
+        getCommand("deathban").setExecutor(new ReloadConfig_Command());
     }
 }
